@@ -1,0 +1,46 @@
+--Design a data model for music application (ie. a map that manages track).
+
+CREATE TABLE Track(
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    title TEXT,
+    album_id INTEGER,
+    genre_id INTEGER,
+    len INTEGER, 
+    rating INTEGER,
+    rate_count INTEGER
+);
+
+CREATE TABLE Album(
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    title TEXT,
+    artist_id INTEGER
+);
+
+CREATE TABLE Genre(
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    name TEXT
+);
+
+CREATE TABLE Artist(
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    name TEXT
+);
+
+--Add new data with foreign keys as link tags, defining relationship between tables
+INSERT INTO Track (title, rating, len, rate_count, album_id, genre_id) 
+VALUES 
+    ('Black Dog', 5, 297, 0, 2, 1),
+    ('Back to December', 8, 293, 0, 3, 3)
+;
+
+--Retrieve features from 2 or more tables
+SELECT Album.title, Artist.name 
+FROM Album 
+JOIN Artist ON Album.artist_id = Artist.id
+
+SELECT Track.title, Artist.name, Album.title, Genre.name 
+FROM Track
+JOIN Genre JOIN Album JOIN Artist
+ON Track.genre_id = Genre_id AND Track.album_id = Album.id
+AND Album.artist_id = Artist.id
+;
