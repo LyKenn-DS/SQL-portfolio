@@ -1,0 +1,107 @@
+/* 
+Dataset: Automobile
+Source: https://archive.ics.uci.edu/dataset/10/automobile
+Query Editor: BigQuery
+*/ 
+
+--First, get an initial understanding of the data by previewing the data table and find out
+  if there is any specific cleaning that needs to be done)
+
+--Inspect the categorical columns 
+
+SELECT 
+    DISTINCT fuel_type
+FROM
+    `ivory-setup-397313.vehicle.automobile`
+LIMIT 100
+;
+
+Note: Alternately, the distinct values- limit 10 only for all categorical data columns can be examined
+     at once using the `TABLE EXPLORER` utility function.  
+
+--Inspect the range of numerical columns
+
+SELECT 
+    MIN(length) min_range, MAX(length) max_range
+FROM 
+    `ivory-setup-397313.vehicle.automobile`
+
+--Inspect rows with missing values in `num_of_doors` column
+
+SELECT 
+    * 
+FROM
+    `ivory-setup-397313.vehicle.automobile`
+WHERE 
+    num_of_doors IS NULL
+;
+
+--Impute missing values
+(After checking with the sales manager, who states that all Dodge gas & Mazda diesel sedans sold had four doors)
+
+UPDATE
+    `ivory-setup-397313.vehicle.automobile`
+SET
+    num_of_doors = "four"
+WHERE
+    make = "dodge" AND fuel_type = "gas" AND body_style = "sedan"
+;
+
+--Rectify the incorrect entries in `num_of_cylinder` column
+
+UPDATE
+  `ivory-setup-397313.vehicle.automobile`
+SET
+    num_of_cylinders = "two"
+WHERE
+    num_of_cylinders = "tow"
+;
+
+--Examine the rows with invalid entries in `compression_ratio` column
+SELECT
+    *
+FROM
+    `ivory-setup-397313.vehicle.automobile`
+WHERE
+    compression_ratio = 70
+;
+
+--Drop invalid rows 
+(After checking with the sales manager, who says that the rows were made in error and should be removed; 
+ Since there is only of them, it is save to drop them without impacting the data story)
+
+DELETE `ivory-setup-397313.vehicle.automobile`
+WHERE compression_ratio = 70
+;
+
+--Check if whitespace is present in the repeated string values in `drive_wheel` column
+SELECT
+    DISTINCT drive_wheels,
+    LENGTH(drive_wheels) AS string_length
+FROM
+    `ivory-setup-397313.vehicle.automobile`
+;
+
+--Trim all extra spaces in `drive_wheel` column
+UPDATE
+    `ivory-setup-397313.vehicle.automobile`
+SET
+    drive_wheels = TRIM(drive_wheels)
+WHERE TRUE
+;
+
+--Examine if there is any similar row to the vehicles with outlying price of 0   
+SELECT 
+    *
+FROM 
+    `ivory-setup-397313.vehicle.automobile` 
+WHERE 
+    make = 'isuzu' AND body_style = 'sedan' AND drive_wheels = 'fwd' 
+;
+
+--Drop invalid rows  
+(After communicating with the sales manager, who says that they should align with the data description)
+
+DELETE `ivory-setup-397313.vehicle.automobile`
+WHERE price = 0
+;
