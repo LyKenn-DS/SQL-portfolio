@@ -4,8 +4,7 @@ Source: https://archive.ics.uci.edu/dataset/10/automobile
 Query Editor: BigQuery
 */ 
 
---First, get an initial understanding of the data by previewing the data table and find out
-  if there is any specific cleaning that needs to be done)
+--First, get an initial understanding of the data by previewing the data table and find out if there is any specific cleaning that needs to be done.
 
 --Inspect the categorical columns 
 
