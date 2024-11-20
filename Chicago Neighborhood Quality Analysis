@@ -1,0 +1,73 @@
+/* 
+Datasets: Chicago census, crime, and public school data
+Source: - https://data.cityofchicago.org/Health-Human-Services/Census-Data-Selected-socioeconomic-indicators-in-C/kn9c-c2s2
+	- https://data.cityofchicago.org/Education/Chicago-Public-Schools-Progress-Report-Cards-2011-/9xs2-f89t
+	- https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-present/ijzp-q8t2
+Query using: SQLite 3
+*/ 
+
+--Inspect metadata about a schema
+SELECT * FROM sqlite_master
+
+-- Get an overview of the data
+SELECT * FROM Chicago_Census_Data LIMIT 10; 
+
+SELECT * FROM Chicago_Public_Schools LIMIT 10;
+
+SELECT * FROM Chicago_Crime_Incidents LIMIT 10;
+
+--Find the total number of crimes recorded in the CRIME table
+SELECT COUNT(DISTINCT case_number) AS total_crime_no
+FROM Chicago_Crime_Data
+;
+
+--List community areas with per capita less than 11,000
+SELECT community_area_name 
+FROM Chicago_Census_Data
+WHERE per_capita_income < 11000
+; 
+
+--List all case numbers for crimes involving minors
+SELECT case_number 
+FROM Chicago_Crime_Incidents
+WHERE description LIKE '%MINOR'
+;
+
+--What kinds of crimes were recorded at schools?
+SELECT DISTINCT primary_type, description, location_description
+FROM Chicago_Crime_Incidents
+WHERE location_description LIKE '%SCHOOL%'
+;
+
+--List the average safety score for each type of school
+SELECT 
+  `Elementary, Middle, or High School` AS type_of_school, 
+  AVG(safety_score) AS average_score
+FROM Chicago_Public_Schools
+GROUP BY 1
+;
+
+--Find the name of the community area with highest hardship index
+SELECT 
+  community_area_name, hardship_index
+FROM 
+  Chicago_Census_Data
+WHERE hardship_index = 
+(  
+   SELECT MAX(hardship_index)
+   FROM Chicago_Census_Data
+)
+;
+
+--Determine the community area name with most number of crimes
+SELECT 
+  community_area_name, MAX(no_of_crime) AS max_crime
+FROM
+(
+   SELECT community_area_name, COUNT(*) AS no_of_crimes
+   FROM Chicago_Census_Data a
+   JOIN Chicago_Crime_Incidents b
+   WHERE a.community_area_number = b.community_area_number
+   GROUP BY 1
+)
+;
