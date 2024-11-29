@@ -11,6 +11,7 @@ The hard and crucial part about SQL that's often ignored by many, is what questi
 - **Data:** Kaggle Seoul Bike Rental Analysis 
 - **Audience:** Maintenance Department
 - **Purpose:** Identify the best time to run maintenance work during standard weekdays.<br>
+
 The Seoul bike rental dataset contains the rented bicycle data collected in 2018. In order to allow smooth scheduled maintenance without disrupting the on-going services, the best time was strategically identified using data to offer valuable insights to the maintenance team. The dashboard provides a clear visual of the bike rental activity in the standard work hour, concerning various social time blocks and seasonal changes.    
 
 
