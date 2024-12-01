@@ -19,7 +19,7 @@ INSERT INTO Employee VALUES
     (9, Kate, 60000, 3),
     (10, James, 60000, 2)
     
-# Find the employees who are high earners in each department
+-- Find the employees who are high earners in each department
 WITH RankedSalary AS ( 
     SELECT 
 	a.name AS employee, a.salary, b.name AS department
