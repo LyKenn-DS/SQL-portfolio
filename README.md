@@ -12,6 +12,9 @@ Thanks for stopping by my SQL portfolio! I'm passionate about working with data,
   - **Description:** This project involves cleaning and preparing data for analysis. The dataset consists of various specifications of an auto, insurance risk rating, and its normalized losses in use as compared to other cars, with 26 columns and 205 entries. 
   - **SQL Skills Used:** Data Cleaning, Profiling Distributions, Profiling Data Quality, String Manipulation, Handling Missin/Incorrect Values.
   - [View SQL Script](https://github.com/LyKenn-DS/SQL-portfolio/blob/2b4d92723fe89c8cab5cfa0d39ac5dd498d62c1c/Automobile%20Data)
-
+ 
+  - **Data Modelling Basic:** Bub's Bigtime Baby Booties Retail Database
+  - **Description:** Using MySQL Database Administration skills to design a database from scratch, which captures information about Bubs' customers, the purchases they make, his products, and his employees.  
+  ![Transactional_Database_EER_Diagram](https://github.com/user-attachments/assets/3dc0d5f7-477e-4447-b021-6c2013d421e1)
 
  
