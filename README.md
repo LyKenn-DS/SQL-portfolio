@@ -3,7 +3,7 @@
 Thanks for stopping by my SQL portfolio! I'm passionate about working with data, and this repository is where I bring that passion to life through SQL. You'll find a range of projects here, from foundational database operations to more advanced analytical tasks. My goal is to demonstrate how I use SQL to transform data into valuable information, and I hope you enjoy exploring them. 
 
 ## Highlighted Projects
-- **Project:** Major League Baseball Analysis
+- **Project:** Major League Baseball (MLB) Analysis
   - **Description:** This project uses advanced SQL querying techniques to track how player statistics have changed over time and across different teams in the league, such as:
     1. What schools do MLB players attend?
     2. How much do teams spend on player salaries? 
