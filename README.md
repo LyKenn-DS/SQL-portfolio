@@ -4,11 +4,11 @@ Thanks for stopping by my SQL portfolio! I'm passionate about working with data,
 
 ## Highlighted Projects
 - **Project:** Major League Baseball Analysis
-  - **Description:** This project use advanced SQL querying techniques to track how player statistics have changed over time and across different teams in the league, such as: <br>
-&emsp;&emsp;&emsp;&emsp; a. What schools do MLB players attend? <br>
-&emsp;&emsp;&emsp;&emsp; b. How much do teams spend on player salaries? <br>
-&emsp;&emsp;&emsp;&emsp; c. What does each player's career look like? <br>
-&emsp;&emsp;&emsp;&emsp; d. How do player attributes compare? <br>
+  - **Description:** This project uses advanced SQL querying techniques to track how player statistics have changed over time and across different teams in the league, such as:
+    1. What schools do MLB players attend?
+    2. How much do teams spend on player salaries? 
+    3. What does each player's career look like? 
+    4. How do player attributes compare?
 The dataset contains decades worth of data including players' information, schools attended, salaries, and teams played for.
   - **SQL Skills Used:** Subqueries, Temporary Tables, Common Table Expression (CTEs), Window Functions, Joins, Handling Duplicate Entries and NULL values, DateTime & String Manipulation, Data Type Conversion, Pivoting, Rolling Calculations. 
 
@@ -19,8 +19,8 @@ The dataset contains decades worth of data including players' information, schoo
 
 - **Project:** Automobile Data Analysis
   - **Description:** This project involves cleaning and preparing data for analysis. The dataset consists of various specifications of an auto, insurance risk rating, and its normalized losses in use as compared to other cars, with 26 columns and 205 entries. 
-  - **SQL Skills Used:** Data Cleaning, Profiling Distributions, Profiling Data Quality, String Manipulation, Handling Missin/Incorrect Values.
-  - [View SQL Script](https://github.com/LyKenn-DS/SQL-portfolio/blob/2b4d92723fe89c8cab5cfa0d39ac5dd498d62c1c/Automobile%20Data)
+  - **SQL Skills Used:** Data Cleaning, Profiling Distributions, Profiling Data Quality, String Manipulation, Handling Missing/Incorrect Values.
+  - [View Data Preparation SQL Script](https://github.com/LyKenn-DS/SQL-portfolio/blob/2b4d92723fe89c8cab5cfa0d39ac5dd498d62c1c/Automobile%20Data)
  
 - **Data Modelling Basic:** Bub's Bigtime Baby Booties Retail Database
   - **Description:** Using MySQL Database Administration skills to design a database from scratch, which captures information about Bubs' customers, the purchases they make, his products, and his employees.
