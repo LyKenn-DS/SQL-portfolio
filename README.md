@@ -9,7 +9,8 @@ Thanks for stopping by my SQL portfolio! I'm passionate about working with data,
     2. How much do teams spend on player salaries? 
     3. What does each player's career look like? 
     4. How do player attributes compare?
-The dataset contains decades worth of data including players' information, schools attended, salaries, and teams played for.
+
+    The dataset contains decades worth of data including players' information, schools attended, salaries, and teams played for.
   - **SQL Skills Used:** Subqueries, Temporary Tables, Common Table Expression (CTEs), Window Functions, Joins, Handling Duplicate Entries and NULL values, DateTime & String Manipulation, Data Type Conversion, Pivoting, Rolling Calculations. 
 
 - **Project:** Chicago Neighborhood Quality Analysis
