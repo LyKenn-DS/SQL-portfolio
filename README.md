@@ -5,10 +5,10 @@ Thanks for stopping by my SQL portfolio! I'm passionate about working with data,
 ## Highlighted Projects
 - **Project:** Major League Baseball (MLB) Analysis
   - **Description:** This project uses advanced SQL querying techniques to track how player statistics have changed over time and across different teams in the league, such as: <br>
-  &emsp;&nbsp; a. What schools do MLB players attend? <br>
-  &emsp;&nbsp; b. How much do teams spend on player salaries? <br>
-  &emsp;&nbsp; c. What does each player's career look like? <br>
-  &emsp;&nbsp; d. How do player attributes compare? <br>
+  &emsp;&emsp; a. What schools do MLB players attend? <br>
+  &emsp;&emsp; b. How much do teams spend on player salaries? <br>
+  &emsp;&emsp; c. What does each player's career look like? <br>
+  &emsp;&emsp; d. How do player attributes compare? <br>
 The dataset contains decades worth of data including players' information, schools attended, salaries, and teams played for.
   - **SQL Skills Used:** Subqueries, Temporary Tables, Common Table Expression (CTEs), Window Functions, Joins, Handling Duplicate Entries and NULL values, DateTime & String Manipulation, Data Type Conversion, Pivoting, Rolling Calculations.
   - [View SQL Script](https://github.com/LyKenn-DS/SQL-portfolio/blob/78468b9b3e24a94b1bd209086ecd84e5ba80c67b/Major%20Baseball%20League/MLB_DataAnalysis.sql)
