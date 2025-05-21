@@ -14,7 +14,15 @@ Thanks for stopping by my SQL portfolio! I'm passionate about working with data,
   - [View SQL Script](https://github.com/LyKenn-DS/SQL-portfolio/blob/2b4d92723fe89c8cab5cfa0d39ac5dd498d62c1c/Automobile%20Data)
  
 - **Data Modelling Basic:** Bub's Bigtime Baby Booties Retail Database
-  - **Description:** Using MySQL Database Administration skills to design a database from scratch, which captures information about Bubs' customers, the purchases they make, his products, and his employees.  
+  - **Description:** Using MySQL Database Administration skills to design a database from scratch, which captures information about Bubs' customers, the purchases they make, his products, and his employees.
+ 
   ![Transactional_Database_EER_Diagram](https://github.com/user-attachments/assets/3dc0d5f7-477e-4447-b021-6c2013d421e1)
+Creating an EER diagram is helpful as it enhances our understanding on how all the data in a database is related by mapping out things like:
+  - Which tables are in the database
+  - Which columns exist in each table
+  - The data types and constraints of the various columns
+  - Primary and Foreign keys within tables
+  - Relationship cardinality between tables
+
 
  
